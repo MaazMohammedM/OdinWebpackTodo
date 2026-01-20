@@ -1,0 +1,197 @@
+.projectBody{
+    width: 100%;
+}
+.emptyContaier{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80svh;
+    width: 100%;
+    text-align: center;
+}
+
+#projectBody{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: 2rem;
+    background-color: white;
+    padding: 1rem;
+    min-height: 80svh;
+    justify-items: start;
+    align-items: start;
+}
+
+
+
+
+.projectHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+#projectBody h1{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.createProjectButton{
+    background: #fff;
+    padding: 1rem 2rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid #45474B;
+}
+
+.projectCard{
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #45474B;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+    justify-content: center;
+}
+
+.projectCard > div{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.projectCard button{
+    border: 1px solid #45474B;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+dialog{
+    margin: auto;
+    /* width: 50vw; */
+    padding: clamp(1.5rem,3vw,3rem);
+}
+
+.dialogDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.dialogDivHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.dialogDivHeader > button{
+    background: none;
+    border: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+form input{
+    padding: 1rem;
+    font-size: 1rem;
+     border: 1px solid #45474B;
+}
+form button{
+    padding: 1rem 2rem;
+    font-family: "Space Grotesk", sans-serif;
+    cursor: pointer;
+    border: 1px solid #45474B;
+    font-weight: 600;
+    background-color: white;
+    /* box-shadow: 1px 1px 1px black; */
+}
+
+.radioContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.radioContainer label{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.radioContainer > div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.todoDesc{
+    width: 100%;
+    padding: 0.5rem;
+    min-height: 10svh;
+}
+
+.todoSubmit{
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.todoHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #45474B;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#todoGrid{
+    width: 100%;
+    min-height: 80svh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background-color:#fff;
+}
+
+.todoCard{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: white;
+    border: 1px solid #45474B;
+    padding: 1rem;
+}
+
+.todoCard button{
+    padding: 0.5rem 1rem;
+    border:1px solid #45474B;
+    background: white;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.todoCard button:hover{
+    background-color: darkred;
+    color: white;
+    border: 1px solid transparent;
+}
