@@ -32,7 +32,7 @@ export const todoGridFunc = (id) => {
                 delteTodotById(project.id,data.id)
                 todoGridFunc(id)
             })
-            todoBody.append(title, description, dueDate, createdOn, priority,deleteBtn);
+            todoBody.append(title, description, createdOn,dueDate, priority,deleteBtn);
             console.log(data);
         })
     }

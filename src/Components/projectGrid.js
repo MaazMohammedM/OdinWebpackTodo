@@ -3,11 +3,11 @@ import { handleRoute } from "..";
 import { delteProjectById, getProject } from "../Stores/projectStore";
 import '../Styles/project.css'
 
-export const projectGrid =()=>{
+export const projectGrid = () => {
     let grid = document.getElementById('projectBody');
     grid.innerHTML = '';
 
-    if(getProject().length === 0){
+    if (getProject().length === 0) {
         grid.innerHTML = '';
         grid.style.display = 'flex';
         let container = document.createElement('div');
@@ -17,26 +17,30 @@ export const projectGrid =()=>{
         p.textContent = "Empty Projects";
         grid.append(container);
     }
-    getProject().map((data)=>{
+    getProject().map((data) => {
         let projectCard = document.createElement('div');
         projectCard.classList.add('projectCard');
         let projectContainer = document.createElement('div');
         let projectName = document.createElement('h1');
         let deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete Project';
-        deleteBtn.addEventListener('click',()=>{
+        deleteBtn.addEventListener('click', () => {
             delteProjectById(data.id)
             projectGrid()
         })
         let routeBtn = document.createElement('button');
         routeBtn.textContent = 'View Project'
-        projectContainer.append(routeBtn,deleteBtn)
-        projectCard.append(projectName,projectContainer);
+        projectContainer.append(routeBtn, deleteBtn)
+        projectCard.append(projectName, projectContainer);
         projectName.innerText = data.name;
         grid.append(projectCard);
-        routeBtn.addEventListener('click',()=>{
-            history.pushState(data,'',`/projects/${data.id}`)
-            handleRoute();
+        routeBtn.addEventListener('click', () => {
+            if (process.env.NODE_ENV === 'production') {
+                window.location.hash = `/projects/${data.id}`;
+            } else {
+                history.pushState(data, '', `/projects/${data.id}`);
+                handleRoute();
+            }
         })
     })
 }
